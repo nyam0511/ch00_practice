@@ -3,14 +3,15 @@
 TODO: 다시 해보기
 """
 
-# 가격 입력 받기
+# 가격 입력받기
 price = int(input("가격 입력: "))
-# 회원 여부 (1: 회원, 0: 비회원) 입력 받기
+# 회원 여부 입력받기
 is_member = int(input("회원 여부 (1: 회원, 0: 비회원): "))
 
-# 회원이면 20% 할인, 비회원이면 5% 할인된 가격 출력
-member = int(price * (1 - 0.2))
-no_member = int(price * (1 - 0.05))
-result = member if is_member == 1 else no_member
-# result = int(price * (1 - 0.2)) if is_member == 1 else int(price * (1 - 0.05))
-print(f"최종 가격: {result}원")
+# 회원이면 20% 할인, 비회원이면 5% 할인 가격 출력(삼항연산자)
+discount_rate = 0.2 if is_member else 0.05
+# 최종 가격 = 가격 * (1 - 할인율)
+final_price = int(price * (1 - discount_rate))
+
+# 최종 가격 출력
+print(f"최종 가격: {final_price}원")
