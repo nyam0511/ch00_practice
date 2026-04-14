@@ -14,7 +14,3 @@ if user_input == password:
 else:
     print("비밀번호 오류")
     print("다시 시도하세요")
-
-
-
-
